@@ -12,11 +12,11 @@
         $latDestination = -7.943795;
         $lngDestination = 112.659256;
 
-        $apiKey = "YOUR_KEY";
+        $apiKey = "YOUR_API_KEY";
         $url = "https://maps.googleapis.com/maps/api/distancematrix/json?units=metric"
-             . "&origins={$latOrigin},{$lngOrigin}"
-             . "&destinations={$latDestination},{$lngDestination}"
-             . "&key={$apiKey}";
+            . "&origins={$latOrigin},{$lngOrigin}"
+            . "&destinations={$latDestination},{$lngDestination}"
+            . "&key={$apiKey}";
 
         $response = file_get_contents($url);
         $data = json_decode($response, true);
